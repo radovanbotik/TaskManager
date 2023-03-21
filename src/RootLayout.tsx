@@ -4,8 +4,10 @@ import { useLoaderData } from "react-router-dom";
 
 const RootLayout = () => {
   return (
-    <div>
-      <Outlet />
+    <div className="flex">
+      <div>
+        <Outlet />
+      </div>
     </div>
   );
 };
