@@ -8,7 +8,7 @@ const RootLayout = () => {
       <div className="flex-shrink-0">
         <Sidebar />
       </div>
-      <div className="flex w-full justify-center">
+      <div className="flex flex-1">
         <Outlet />
       </div>
     </div>

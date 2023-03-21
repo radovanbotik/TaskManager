@@ -4,6 +4,6 @@ export type TaskType = {
   dueTo: number;
   title: string;
   urgent: boolean;
-  status: "active" | "finished";
+  status: "active" | "completed";
   id: string;
 };

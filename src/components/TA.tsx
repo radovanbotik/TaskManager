@@ -50,13 +50,13 @@ function TA() {
               </button>
             </div>
             {/* TABLE / RECORDS */}
-            <div className="mt-7 overflow-x-auto">
+            {/* <div className="mt-7 overflow-x-auto">
               <table className="w-full whitespace-nowrap">
                 <tbody>
                   <TaskRow />
                 </tbody>
               </table>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* <style>
