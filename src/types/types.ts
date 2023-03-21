@@ -1,9 +1,9 @@
 export type TaskType = {
-  createdOn: string;
-  editedOn: string;
-  dueTo: string;
+  createdOn: number;
+  editedOn: number;
+  dueTo: number;
   title: string;
-  urgent: string;
+  urgent: boolean;
   status: "active" | "finished";
   id: string;
 };

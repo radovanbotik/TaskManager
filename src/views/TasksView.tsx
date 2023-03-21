@@ -1,7 +1,9 @@
 import React from "react";
 import { useLoaderData, redirect, LoaderFunction, Form } from "react-router-dom";
 import { TaskCalls } from "../calls";
-import TA from "../components/TA";
+import TaskRow from "../components/TaskRow";
+import { TaskType } from "../types/types";
+
 export const loader: LoaderFunction = async () => {
   return await TaskCalls.getTasks();
 };
@@ -12,14 +14,18 @@ export const action = async () => {
 };
 
 const TasksView = () => {
-  const tasks = useLoaderData();
-  console.log(tasks);
+  const tasks = useLoaderData() as TaskType[];
   return (
-    <div>
-      <TA />
-      <Form method="post">
-        <button type="submit">create</button>
-      </Form>
+    <div className="bg-white py-4 px-4 md:py-7 md:px-8 xl:px-10">
+      <div className="mt-7 overflow-x-auto">
+        <table className="w-full whitespace-nowrap">
+          <tbody>
+            {tasks.map(task => (
+              <TaskRow key={task.id} {...task} />
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
