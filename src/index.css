@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+checkbox:checked + .check-icon {
+  display: flex;
+}
