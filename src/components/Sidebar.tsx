@@ -5,7 +5,9 @@ const Sidebar = () => {
     <div>
       <div className="flex h-screen flex-col justify-between border-r bg-white">
         <div className="px-4 py-6">
-          <span className="grid h-10 w-32 place-content-center rounded-lg bg-gray-100 text-xs text-gray-600">Logo</span>
+          <span className="grid h-10 w-32 place-content-center rounded-lg bg-gray-100 text-xs text-gray-600">
+            Taskmaster-9000
+          </span>
 
           <nav aria-label="Main Nav" className="mt-6 flex flex-col space-y-1">
             <a href="#" className="flex items-center gap-2 rounded-lg bg-gray-100 px-4 py-2 text-gray-700">
@@ -25,10 +27,10 @@ const Sidebar = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
 
-              <span className="text-sm font-medium"> General </span>
+              <span className="text-sm font-medium"> Tasks </span>
             </a>
 
-            <details className="group [&_summary::-webkit-details-marker]:hidden">
+            {/* <details className="group [&_summary::-webkit-details-marker]:hidden">
               <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
                 <div className="flex items-center gap-2">
                   <svg
@@ -252,7 +254,7 @@ const Sidebar = () => {
                   </button>
                 </form>
               </nav>
-            </details>
+            </details> */}
           </nav>
         </div>
 

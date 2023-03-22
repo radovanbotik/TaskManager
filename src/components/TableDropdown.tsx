@@ -1,6 +1,7 @@
 import React from "react";
 import TableLink from "./TableLink";
 import { TaskType } from "../types/types";
+import { Form } from "react-router-dom";
 
 type DropdownProps = Pick<TaskType, "id">;
 
@@ -10,9 +11,14 @@ const TableDropdown = ({ id }: DropdownProps) => {
       <TableLink id={id} action="edit">
         Edit
       </TableLink>
-      <TableLink id={id} action="delete">
-        Delete
-      </TableLink>
+      <Form method="post" action={`${id}/delete`}>
+        <button
+          className="block w-full cursor-pointer py-4 px-4 text-xs hover:bg-indigo-700 hover:text-white"
+          type="submit"
+        >
+          Delete
+        </button>
+      </Form>
     </div>
   );
 };

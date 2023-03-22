@@ -32,7 +32,7 @@ const TasksView = () => {
     }
     if (category === "active") setTasks(fetchedTasks.filter(task => task.status === "active"));
     if (category === "completed") setTasks(fetchedTasks.filter(task => task.status === "completed"));
-  }, [category]);
+  }, [category, fetchedTasks]);
 
   return (
     <div className="w-full bg-white py-4 px-4 md:py-7 md:px-8 xl:px-10">
