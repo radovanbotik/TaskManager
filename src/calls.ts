@@ -22,9 +22,11 @@ export const TaskCalls = {
     requests.post("task", {
       id: Math.random().toString(36).substring(2, 9),
       createdOn: Date.now(),
-      editedOn: Date.now(),
       dueTo: Date.now(),
       status: "active",
+      urgent: "false",
+      desc: "This is an editable field...",
+      title: "New Task",
     }),
   updateTask: (taskId: string, body: TaskType | Partial<TaskType>): Promise<TaskType> =>
     requests.put(`task/${taskId}`, body),

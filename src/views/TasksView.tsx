@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData, redirect, LoaderFunction, Form } from "react-router-dom";
 import { TaskCalls } from "../calls";
-import ActionNav from "../components/ActionNav";
 import PillButton from "../components/PillButton";
 import SubmitButton from "../components/SubmitButton";
-import TaskRow from "../components/TaskRow";
 import { TaskType } from "../types/types";
+import Note from "../note/Note";
 
 export const loader: LoaderFunction = async () => {
   return await TaskCalls.getTasks();
@@ -52,14 +51,12 @@ const TasksView = () => {
           <SubmitButton type="submit">Add Task</SubmitButton>
         </Form>
       </div>
-      <div className="mt-7 overflow-x-auto">
-        <table className="w-full whitespace-nowrap">
-          <tbody>
-            {tasks.map(task => (
-              <TaskRow key={task.id} {...task} />
-            ))}
-          </tbody>
-        </table>
+      <div className="container mx-auto py-20 px-6">
+        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {tasks.map(task => (
+            <Note key={task.id} {...task} />
+          ))}
+        </div>
       </div>
     </div>
   );

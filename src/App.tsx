@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./RootLayout";
 import TasksView, { loader as tasksLoader, action as createTask } from "./views/TasksView";
 import TaskView, { loader as taskLoader } from "./views/TaskView";
-import TaskEditView, { loader as EditLoader, action as updateTask } from "./views/TaskEditView";
+import TaskEditView, { loader as editLoader, action as updateTask } from "./views/TaskEditView";
 import ErrorView from "./views/ErrorView";
 import TaskDeleteView, { action as deleteTask } from "./views/TaskDeleteView";
 
@@ -25,8 +25,7 @@ const router = createBrowserRouter([
       },
       {
         path: "tasks/:taskId/edit",
-        element: <TaskEditView />,
-        loader: EditLoader,
+        loader: editLoader,
         action: updateTask,
       },
       {
