@@ -4,7 +4,7 @@ import Sidebar from "./components/Sidebar";
 
 const RootLayout = () => {
   return (
-    <div className="flex bg-red-800">
+    <div className="flex">
       <div className="flex-shrink-0">
         <Sidebar />
       </div>

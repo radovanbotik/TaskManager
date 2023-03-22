@@ -35,7 +35,7 @@ const TasksView = () => {
 
   return (
     <div className="w-full bg-white py-4 px-4 md:py-7 md:px-8 xl:px-10">
-      <div className="items-center justify-between sm:flex">
+      <div className="items-center justify-between px-6 sm:flex">
         <div className="flex items-center">
           <PillButton type="button" handleClick={handleClick} value="all">
             All
@@ -51,7 +51,7 @@ const TasksView = () => {
           <SubmitButton type="submit">Add Task</SubmitButton>
         </Form>
       </div>
-      <div className="container mx-auto py-20 px-6">
+      <div className="mx-auto py-20 px-6">
         <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {tasks.map(task => (
             <Note key={task.id} {...task} />

@@ -10,7 +10,7 @@ const Due = ({ dueTo, isEditing }: DueProps) => {
   };
 
   const parseTimeInput: (timestring: number) => string = timestring => {
-    return moment(timestring).format("YYYY-MM-D");
+    return moment(timestring).format("YYYY-MM-DD");
   };
 
   if (isEditing)

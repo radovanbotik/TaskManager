@@ -9,7 +9,7 @@ export const loader: LoaderFunction = async ({ params: { taskId } }) => {
 };
 const TaskView = () => {
   const task = useLoaderData() as TaskType;
-  return <div className="w-full bg-white py-4 px-4 md:py-7 md:px-8 xl:px-10"></div>;
+  return <div></div>;
 };
 
 export default TaskView;

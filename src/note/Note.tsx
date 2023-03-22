@@ -26,8 +26,18 @@ const Note = ({ id, title, createdOn, dueTo, desc, urgent }: TaskType) => {
     setTimeout(() => setIsEditing(false), 500);
   };
 
+  const isExpired: (dueTo: number) => boolean = dueTo => {
+    const now = Date.now();
+    if (dueTo < now) return false;
+    return true;
+  };
+
   return (
-    <div className="mb-6 flex h-80 w-full flex-col justify-between rounded-lg border border-yellow-400 bg-yellow-400 py-5 px-4">
+    <div
+      className={`mb-6 flex h-80 w-full flex-col justify-between rounded-lg border  py-5 px-4 ${
+        !isExpired(dueTo) ? "border-red-300 bg-red-300" : "border-yellow-400 bg-yellow-400"
+      }`}
+    >
       <Form method="post" action={`${id}/edit`}>
         {/* title + desc*/}
         <div>

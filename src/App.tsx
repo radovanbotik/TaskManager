@@ -5,6 +5,7 @@ import TaskView, { loader as taskLoader } from "./views/TaskView";
 import TaskEditView, { loader as editLoader, action as updateTask } from "./views/TaskEditView";
 import ErrorView from "./views/ErrorView";
 import TaskDeleteView, { action as deleteTask } from "./views/TaskDeleteView";
+import IndexView from "./views/IndexView";
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     errorElement: <ErrorView />,
     children: [
+      {
+        index: true,
+        element: <IndexView />,
+      },
       {
         path: "tasks",
         element: <TasksView />,
