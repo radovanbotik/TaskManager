@@ -11,7 +11,7 @@ const TableDropdown = ({ id }: DropdownProps) => {
       <TableLink id={id} action="edit">
         Edit
       </TableLink>
-      <Form method="post" action={`${id}/delete`}>
+      <Form method="post" action={`delete`}>
         <button
           className="block w-full cursor-pointer py-4 px-4 text-xs hover:bg-indigo-700 hover:text-white"
           type="submit"

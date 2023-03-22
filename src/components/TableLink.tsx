@@ -10,7 +10,7 @@ type LinkProps = Pick<TaskType, "id"> & {
 const TableLink = ({ id, children, action }: LinkProps) => {
   return (
     <Link
-      to={`${action}`}
+      to={`${id}/${action}`}
       className="block w-full cursor-pointer py-4 px-4 text-xs hover:bg-indigo-700 hover:text-white"
     >
       <p>{children}</p>

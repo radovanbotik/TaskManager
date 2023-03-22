@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -10,7 +11,7 @@ const Sidebar = () => {
           </span>
 
           <nav aria-label="Main Nav" className="mt-6 flex flex-col space-y-1">
-            <a href="#" className="flex items-center gap-2 rounded-lg bg-gray-100 px-4 py-2 text-gray-700">
+            <Link to="tasks" className="flex items-center gap-2 rounded-lg bg-gray-100 px-4 py-2 text-gray-700">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5 opacity-75"
@@ -28,7 +29,7 @@ const Sidebar = () => {
               </svg>
 
               <span className="text-sm font-medium"> Tasks </span>
-            </a>
+            </Link>
 
             {/* <details className="group [&_summary::-webkit-details-marker]:hidden">
               <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
